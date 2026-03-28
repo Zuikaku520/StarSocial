@@ -1,0 +1,370 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(ellipse at 20% 30%, #0A0F1E, #03060C);
+    color: #E8EFF7;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 星空动态背景 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), rgba(0,0,0,0));
+    background-size: 200px 200px;
+    pointer-events: none;
+    animation: starMove 60s linear infinite;
+    z-index: 0;
+}
+
+@keyframes starMove {
+    from { background-position: 0 0; }
+    to { background-position: 200px 200px; }
+}
+
+.app {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* 导航栏 */
+.stellar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+    backdrop-filter: blur(8px);
+    background: rgba(10, 15, 26, 0.6);
+    border-radius: 40px;
+    padding: 8px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.star-icon {
+    font-size: 24px;
+    filter: drop-shadow(0 0 4px #FFD966);
+}
+
+.title {
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    font-size: 18px;
+    background: linear-gradient(135deg, #E8EFF7, #00D4FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.user-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.user-badge .avatar {
+     width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(0, 212, 255, 0.5);
+}
+
+.user-badge .name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 动态卡片 */
+.post-card {
+    background: rgba(20, 28, 40, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    margin-bottom: 24px;
+    padding: 16px;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* 光效扫过动画 */
+.post-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(115deg, rgba(255,255,255,0) 10%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 90%);
+    transform: rotate(25deg);
+    animation: shine 8s infinite;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    20% { transform: translateX(100%) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+}
+
+/* 卡片头部 */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(0, 212, 255, 0.6);
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+    background: #1E2A3A;
+}
+
+.post-author {
+    flex: 1;
+}
+
+.post-name {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-time {
+    font-size: 12px;
+    color: rgba(232, 239, 247, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+/* 内容区 */
+.post-content {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 12px 0;
+}
+
+.post-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.post-image {
+    max-width: 100%;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* 点赞栏（头像列表） */
+.likes-section {
+    margin: 16px 0 8px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0,212,255,0.2);
+}
+
+.likes-avatars {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.likes-avatars .like-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #FFD966;
+    object-fit: cover;
+}
+
+.likes-text {
+    font-size: 13px;
+    color: rgba(232, 239, 247, 0.7);
+    margin-left: 8px;
+}
+
+/* 表情栏（Telegram风格） */
+.reactions-section {
+    margin: 8px 0;
+    padding: 8px 0;
+    border-top: 1px solid rgba(0,212,255,0.2);
+    border-bottom: 1px solid rgba(0,212,255,0.2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.reaction-item {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.reaction-emoji {
+    font-size: 1.2em;
+}
+
+.reaction-count {
+    font-weight: 500;
+}
+
+/* 评论区 */
+.comments-section {
+    margin-top: 16px;
+}
+
+.comment {
+    margin-bottom: 16px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.comment-author {
+    font-weight: 600;
+    font-size: 14px;
+    color: #00D4FF;
+}
+
+.comment-time {
+    font-size: 11px;
+    color: rgba(232, 239, 247, 0.5);
+}
+
+.comment-content {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-left: 0;
+}
+
+/* 回复嵌套 */
+/* .reply {
+    margin-left: 32px;
+    margin-top: 12px;
+    padding-left: 16px;
+    border-left: 2px solid rgba(0, 212, 255, 0.4);
+} */
+
+/* 回复样式微调 */
+.reply {
+   margin-left: 20px;  /* 统一缩进，不随层级增加 */
+    margin-top: 12px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+/* .reply .comment-author {
+    font-size: 13px;
+} */
+
+.comment-author {
+    font-weight: 600;
+    font-size: 14px;
+    color: #00D4FF;
+}
+
+/* 加载动画 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: rgba(232, 239, 247, 0.6);
+}
+
+.sys-logo {
+     width: 28px;
+    height: 28px;
+    display: block;
+}
+
+/* 统一所有角色名大小 */
+.comment-author,
+.reply-author,
+.reply-target {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 回复中的"回复"二字保持灰色小字 */
+.reply-word {
+    font-size: 13px;
+    font-weight: normal;
+    color: rgba(232, 239, 247, 0.6);
+}
+
+/* 一级评论作者保持原有颜色 */
+.comment-author {
+    color: #00D4FF;
+}
+
+/* 回复中的作者名和被回复人 */
+.reply-author,
+.reply-target {
+    color: #00D4FF;
+}
+
+/* 评论头部布局 */
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.comment-author-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>星穹社交系统 · 开拓者朋友圈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 顶部导航栏 -->
+        <header class="stellar-nav">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="images/icons/header.png" alt="星穹logo" class="sys-logo">
+                    <span class="title">StaRail-Social</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="user-badge">
+                    <img class="avatar" src="images/avatars/trailblazer-avatar.png" alt="开拓者">
+                    <span class="name">开拓者</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 朋友圈动态列表容器 -->
+        <main class="posts-container" id="posts-container">
+            <!-- 这里会由JavaScript动态生成卡片 -->
+            <div class="loading">正在加载星穹动态...</div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
