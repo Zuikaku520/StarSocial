@@ -24,7 +24,7 @@ function getAvatarPath(characterName) {
     景元: "jingyuan-avatar.png",
     彦卿: "yq.png",
     砂金: "sj.png",
-    托帕: "tuopa-avatar.png",
+    托帕: "topaz.png",
     银狼: "silver_wolf.png",
     卡芙卡: "kafuka-avatar.png",
     刃: "ren-avatar.png",
@@ -134,7 +134,7 @@ function renderPosts(posts) {
     html += `
       <div class="post-card">
         <div class="post-header">
-          <img class="post-avatar" src="${post.avatar}" alt="${post.author}">
+          <img class="post-avatar" src="${getAvatarPath(post.author)}" alt="${post.author}">
           <div class="post-author">
             <div class="post-name">${escapeHtml(post.author)}</div>
             <div class="post-time">
