@@ -1,0 +1,34 @@
+{
+  "chats": [
+    {
+      "character": "托帕",
+      "avatar": "images/avatars/topaz.png",
+      "lastMessage": "考完了吗？",
+      "lastTime": "19:30",
+      "unread": 1,
+      "messages": [
+        {
+          "id": 1,
+          "sender": "托帕",
+          "content": "刚开完会，砂金又说了半小时废话。",
+          "time": "2024-05-15 18:30:00",
+          "type": "text"
+        },
+        {
+          "id": 2,
+          "sender": "user",
+          "content": "哈哈，他又说什么了？",
+          "time": "2024-05-15 18:32:00",
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "sender": "托帕",
+          "content": "说他的部门‘需要更多资金支持’，但拿不出数据。我问他ROI多少，他沉默了。",
+          "time": "2024-05-15 18:35:00",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

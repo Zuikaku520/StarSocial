@@ -32,6 +32,30 @@
             <!-- 这里会由JavaScript动态生成卡片 -->
             <div class="loading">正在加载星穹动态...</div>
         </main>
+        <!-- 新增：聊天视图（初始隐藏） -->
+        <div class="chat-view" id="chat-view" style="display: none;">
+            <!-- 聊天列表页 -->
+            <div class="chat-list-container" id="chat-list">
+                <!-- 所有聊天会话列表 -->
+            </div>
+        
+            <!-- 单聊详情页（初始隐藏） -->
+            <div class="chat-detail-container" id="chat-detail" style="display: none;">
+                <div class="chat-header">
+                    <button class="back-btn" id="back-to-list">←</button>
+                    <button class="theme-toggle-btn" id="theme-toggle">🌙</button>
+                    <img class="chat-avatar" id="chat-avatar" src="" alt="">
+                    <span class="chat-name" id="chat-name"></span>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <!-- 消息列表 -->
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="给朋友留言..." class="chat-input">
+                    <button id="send-btn" class="send-btn">发送</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
