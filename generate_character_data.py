@@ -1,7 +1,7 @@
 import json
 import time
 import openai
-FORCE_FULL_GENERATE = False   # 默认 False，增量更新；设为 True 则重新生成全部
+FORCE_FULL_GENERATE = True   # 默认 False，增量更新；设为 True 则重新生成全部
 # ========== 配置 ==========
 DEEPSEEK_API_KEY = "sk-b3a4f4a80d474b81bd673c27f6af92cb"  # 替换成你的
 
@@ -31,6 +31,7 @@ def generate_character_profile(character_name):
     "interests": ["兴趣关键词1", "兴趣关键词2", "兴趣关键词3", "兴趣关键词4", "兴趣关键词5"],
     "style": "说话风格特点，15字左右，要口语化，例如'活泼，常用语气词和颜文字'或'简洁，偶尔用省略号'",
     "catchphrases": ["日常口头禅1", "日常口头禅2", "日常口头禅3"],
+    "trendy_style": "如果角色适合使用网络流行语，请描述他/她适合的流行语风格（如'粗犷豪放，爱用“绝了”、“痛快”'；或'活泼可爱，爱用“666”、“点了”'；如果不适合，写“不使用流行语”）",
     "relationships": {{
         "关系好的角色": "关系描述",
         "关系一般的角色": "关系描述"
@@ -40,7 +41,8 @@ def generate_character_profile(character_name):
 要求：
 1. catchphrases 必须包含3个日常用语，要口语化、接地气，例如“呀！”、“好棒！”、“拍下来拍下来！”等。
 2. style 要描述角色说话的口语化特点，如“常用语气词”、“喜欢用短句”、“爱用省略号”等。
-3. 确保信息准确，基于游戏实际设定。"""
+3. trendy_style 要明确描述适合的流行语风格或注明“不使用流行语”。
+4. 确保信息准确，基于游戏实际设定。"""
     
     try:
         # 新版 API 调用方式
