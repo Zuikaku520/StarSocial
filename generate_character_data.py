@@ -1,7 +1,7 @@
 import json
 import time
 import openai
-FORCE_FULL_GENERATE = True   # 默认 False，增量更新；设为 True 则重新生成全部
+FORCE_FULL_GENERATE = False   # 默认 False，增量更新；设为 True 则重新生成全部
 # ========== 配置 ==========
 DEEPSEEK_API_KEY = "sk-b3a4f4a80d474b81bd673c27f6af92cb"  # 替换成你的
 
@@ -17,7 +17,8 @@ CHARACTER_NAMES = [
     "砂金", "托帕", "银狼", "卡芙卡", "刃",
     "花火", "黑塔", "知更鸟", "帕姆", "符玄",
     "黄泉", "波提欧", "乱破", "银枝", "白露",
-    "镜流", "阮·梅", "螺丝咕姆", "翡翠", "流萤"
+    "镜流", "阮·梅", "螺丝咕姆", "翡翠", "流萤",
+    "飞霄","灵砂","云璃","黑天鹅"
 ]
 
 def generate_character_profile(character_name):

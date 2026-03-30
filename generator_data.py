@@ -760,7 +760,119 @@ RELATIONSHIPS = {
   "螺丝咕姆|流萤": 0.15,
   "流萤|螺丝咕姆": 0.15,
   "翡翠|流萤": 0.15,
-  "流萤|翡翠": 0.15
+  "流萤|翡翠": 0.15,
+  "飞霄|黄泉": 0.2,
+  "飞霄|白露": 0.15,
+  "飞霄|镜流": 0.25,
+  "飞霄|帕姆": 0.1,
+  "飞霄|乱破": 0.7,
+  "飞霄|知更鸟": 0.3,
+  "飞霄|符玄": 0.35,
+  "飞霄|黑塔": 0.15,
+  "飞霄|景元": 0.9,
+  "飞霄|花火": 0.1,
+  "飞霄|砂金": 0.25,
+  "飞霄|丹恒": 0.15,
+  "飞霄|刃": 0.1,
+  "飞霄|彦卿": 0.7,
+  "飞霄|螺丝咕姆": 0.2,
+  "飞霄|托帕": 0.3,
+  "飞霄|银枝": 0.75,
+  "飞霄|三月七": 0.25,
+  "飞霄|云璃": 0.7,
+  "飞霄|流萤": 0.2,
+  "飞霄|姬子": 0.3,
+  "飞霄|卡芙卡": 0.15,
+  "飞霄|灵砂": 0.65,
+  "飞霄|银狼": 0.1,
+  "飞霄|阮·梅": 0.2,
+  "飞霄|翡翠": 0.3,
+  "飞霄|波提欧": 0.4,
+  "飞霄|黑天鹅": 0.2,
+  "灵砂|黄泉": 0.2,
+  "灵砂|白露": 0.4,
+  "灵砂|镜流": 0.3,
+  "灵砂|帕姆": 0.1,
+  "灵砂|乱破": 0.6,
+  "灵砂|知更鸟": 0.2,
+  "灵砂|符玄": 0.5,
+  "灵砂|飞霄": 0.7,
+  "灵砂|黑塔": 0.15,
+  "灵砂|景元": 0.25,
+  "灵砂|花火": 0.1,
+  "灵砂|砂金": 0.7,
+  "灵砂|丹恒": 0.2,
+  "灵砂|刃": 0.1,
+  "灵砂|彦卿": 0.15,
+  "灵砂|螺丝咕姆": 0.1,
+  "灵砂|托帕": 0.75,
+  "灵砂|银枝": 0.15,
+  "灵砂|三月七": 0.25,
+  "灵砂|云璃": 0.7,
+  "灵砂|流萤": 0.2,
+  "灵砂|姬子": 0.3,
+  "灵砂|卡芙卡": 0.1,
+  "灵砂|银狼": 0.1,
+  "灵砂|阮·梅": 0.15,
+  "灵砂|翡翠": 0.25,
+  "灵砂|波提欧": 0.1,
+  "灵砂|黑天鹅": 0.2,
+  "云璃|黄泉": 0.2,
+  "云璃|白露": 0.4,
+  "云璃|镜流": 0.7,
+  "云璃|帕姆": 0.1,
+  "云璃|乱破": 0.3,
+  "云璃|知更鸟": 0.2,
+  "云璃|符玄": 0.5,
+  "云璃|飞霄": 0.6,
+  "云璃|黑塔": 0.2,
+  "云璃|景元": 0.9,
+  "云璃|花火": 0.1,
+  "云璃|砂金": 0.15,
+  "云璃|丹恒": 0.25,
+  "云璃|刃": 0.3,
+  "云璃|彦卿": 0.7,
+  "云璃|螺丝咕姆": 0.1,
+  "云璃|托帕": 0.75,
+  "云璃|银枝": 0.65,
+  "云璃|三月七": 0.4,
+  "云璃|流萤": 0.35,
+  "云璃|姬子": 0.3,
+  "云璃|卡芙卡": 0.25,
+  "云璃|灵砂": 0.7,
+  "云璃|银狼": 0.2,
+  "云璃|阮·梅": 0.15,
+  "云璃|翡翠": 0.25,
+  "云璃|波提欧": 0.1,
+  "云璃|黑天鹅": 0.2,
+  "黑天鹅|黄泉": 0.75,
+  "黑天鹅|白露": 0.15,
+  "黑天鹅|镜流": 0.2,
+  "黑天鹅|帕姆": 0.1,
+  "黑天鹅|乱破": 0.25,
+  "黑天鹅|知更鸟": 0.65,
+  "黑天鹅|符玄": 0.3,
+  "黑天鹅|飞霄": 0.25,
+  "黑天鹅|黑塔": 0.25,
+  "黑天鹅|景元": 0.15,
+  "黑天鹅|花火": 0.35,
+  "黑天鹅|砂金": 0.4,
+  "黑天鹅|丹恒": 0.2,
+  "黑天鹅|刃": 0.1,
+  "黑天鹅|彦卿": 0.1,
+  "黑天鹅|螺丝咕姆": 0.2,
+  "黑天鹅|托帕": 0.2,
+  "黑天鹅|银枝": 0.1,
+  "黑天鹅|三月七": 0.15,
+  "黑天鹅|云璃": 0.1,
+  "黑天鹅|流萤": 0.25,
+  "黑天鹅|姬子": 0.2,
+  "黑天鹅|卡芙卡": 0.9,
+  "黑天鹅|灵砂": 0.15,
+  "黑天鹅|银狼": 0.2,
+  "黑天鹅|阮·梅": 0.15,
+  "黑天鹅|翡翠": 0.9,
+  "黑天鹅|波提欧": 0.1
 }
 DEFAULT_RELATION = 0.3
 
@@ -1065,7 +1177,30 @@ def get_avatar_filename(name):
     }
     return avatar_map.get(name, "default.png")
 
+def _is_similar(text1, text2, threshold=0.6):
+    """简单判断两段文本是否相似"""
+    if text1 == text2:
+        return True
+    # 如果一段是另一段的子串
+    if text1 in text2 or text2 in text1:
+        return True
+    # 计算公共前缀比例
+    min_len = min(len(text1), len(text2))
+    if min_len == 0:
+        return False
+    common = 0
+    for i in range(min_len):
+        if text1[i] == text2[i]:
+            common += 1
+        else:
+            break
+    return (common / min_len) > threshold
+
 def generate_post(post_id, author, content, image_path):
+
+    # 新增：记录每个角色已生成的评论内容（避免重复）
+    role_comments_history = {}
+
     """生成单条朋友圈，基于阵营匹配地点"""
     # 获取作者阵营和地点
     faction = FACTIONS.get(author, "未知")
@@ -1120,7 +1255,18 @@ def generate_post(post_id, author, content, image_path):
     # 生成评论
     comments = []
     for commenter in commenters:
-        comment_text = generate_comment(commenter, content, context="", post_info=post_info)
+        # 生成评论内容，最多重试3次避免重复
+        comment_text = None
+        for attempt in range(3):
+            temp_text = generate_comment(commenter, content, context="", post_info=post_info)
+            existing = role_comments_history.get(commenter, [])
+            if not any(_is_similar(temp_text, old) for old in existing):
+                comment_text = temp_text
+                role_comments_history.setdefault(commenter, []).append(comment_text)
+                break
+        if comment_text is None:
+            comment_text = generate_comment(commenter, content, context="", post_info=post_info)
+            role_comments_history.setdefault(commenter, []).append(comment_text)
         comment = {
             "author": commenter,
             "content": comment_text,
@@ -1133,10 +1279,22 @@ def generate_post(post_id, author, content, image_path):
             if replier in (commenter, author):
                 continue
             if maybe_reply(commenter, comment_text, content, replier):
-                reply_text = generate_comment(replier, content, f"正在回复 {commenter} 的评论：「{comment_text}」", post_info=post_info)
+                # 生成回复内容，去重
+                reply_content = None
+                for attempt in range(3):
+                    temp_reply = generate_comment(replier, content, f"正在回复 {commenter} 的评论：「{comment_text}」", post_info=post_info)
+                    existing = role_comments_history.get(replier, [])
+                    if not any(_is_similar(temp_reply, old) for old in existing):
+                        reply_content = temp_reply
+                        role_comments_history.setdefault(replier, []).append(reply_content)
+                        break
+                if reply_content is None:
+                    reply_content = generate_comment(replier, content, f"正在回复 {commenter} 的评论：「{comment_text}」", post_info=post_info)
+                    role_comments_history.setdefault(replier, []).append(reply_content)
+                
                 first_level.append({
                     "author": replier,
-                    "content": reply_text,
+                    "content": reply_content,
                     "time": f"{random.randint(1, 2)}小时前",
                     "replyTo": commenter,
                     "replies": []
@@ -1144,17 +1302,29 @@ def generate_post(post_id, author, content, image_path):
         # 第二层回复
         for reply in first_level:
             second_count = 0
-            max_second = random.randint(0, 1)  # 0-1条
+            max_second = random.randint(0, 1)
             for deeper in ALL_CHARACTERS:
                 if second_count >= max_second:
                     break
                 if deeper in (reply["author"], commenter, author):
                     continue
                 if maybe_reply(reply["author"], reply["content"], content, deeper):
-                    deeper_text = generate_comment(deeper, content, f"正在回复 {reply['author']} 的回复：「{reply['content']}」", post_info=post_info)
+                    # 生成更深层回复，去重
+                    deeper_content = None
+                    for attempt in range(3):
+                        temp_deeper = generate_comment(deeper, content, f"正在回复 {reply['author']} 的回复：「{reply['content']}」", post_info=post_info)
+                        existing = role_comments_history.get(deeper, [])
+                        if not any(_is_similar(temp_deeper, old) for old in existing):
+                            deeper_content = temp_deeper
+                            role_comments_history.setdefault(deeper, []).append(deeper_content)
+                            break
+                    if deeper_content is None:
+                        deeper_content = generate_comment(deeper, content, f"正在回复 {reply['author']} 的回复：「{reply['content']}」", post_info=post_info)
+                        role_comments_history.setdefault(deeper, []).append(deeper_content)
+                    
                     reply["replies"].append({
                         "author": deeper,
-                        "content": deeper_text,
+                        "content": deeper_content,
                         "time": f"{random.randint(1, 2)}小时前",
                         "replyTo": reply["author"],
                         "replies": []
