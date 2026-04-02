@@ -27,6 +27,18 @@
             </div>
         </header>
 
+        <div class="publish-area"
+            style="background: rgba(20,28,40,0.7); backdrop-filter: blur(12px); border-radius: 28px; padding: 16px; margin-bottom: 20px;">
+            <textarea id="postContent" placeholder="写点什么吧..." rows="2"
+                style="width: 100%; background: rgba(0,0,0,0.3); border: 1px solid rgba(0,212,255,0.3); border-radius: 16px; padding: 12px; color: white; resize: vertical;"></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+                <label for="postImage" style="cursor: pointer;">📷 添加图片</label>
+                <input type="file" id="postImage" accept="image/*" style="display: none;">
+                <button id="publishBtn"
+                    style="background: #00D4FF; border: none; padding: 8px 24px; border-radius: 40px; font-weight: bold; cursor: pointer;">发布</button>
+            </div>
+        </div>
+
         <!-- 朋友圈动态列表容器 -->
         <main class="posts-container" id="posts-container">
             <!-- 这里会由JavaScript动态生成卡片 -->

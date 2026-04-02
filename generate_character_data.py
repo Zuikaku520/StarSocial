@@ -18,7 +18,9 @@ CHARACTER_NAMES = [
     "花火", "黑塔", "知更鸟", "帕姆", "符玄",
     "黄泉", "波提欧", "乱破", "银枝", "白露",
     "镜流", "阮·梅", "螺丝咕姆", "翡翠", "流萤",
-    "飞霄","灵砂","云璃","黑天鹅"
+    "飞霄","灵砂","云璃","黑天鹅","青雀","素裳",
+    "桂乃芬","艾丝妲","桑博","藿藿","真理医生",
+    "椒丘","貊泽"
 ]
 
 def generate_character_profile(character_name):
@@ -33,6 +35,7 @@ def generate_character_profile(character_name):
     "style": "说话风格特点，15字左右，要口语化，例如'活泼，常用语气词和颜文字'或'简洁，偶尔用省略号'",
     "catchphrases": ["日常口头禅1", "日常口头禅2", "日常口头禅3"],
     "trendy_style": "如果角色适合使用网络流行语，请描述他/她适合的流行语风格（如'粗犷豪放，爱用“绝了”、“痛快”'；或'活泼可爱，爱用“666”、“点了”'；如果不适合，写“不使用流行语”）",
+    "term_style": "描述角色适合使用的ACG圈或饭圈用语风格（如'游戏宅，爱用游戏术语：沉船、人权卡、开黑'；或'追星少女，爱用饭圈用语：我推、绝美、入股不亏'；或'乐子人，爱用整活用语：绝了、蚌埠住了'）。**注意：所有角色都应有具体的风格描述，不要写'不使用'**，除非角色极度严肃（如丹恒、景元可写'不使用'）。",
     "relationships": {{
         "关系好的角色": "关系描述",
         "关系一般的角色": "关系描述"
@@ -42,7 +45,7 @@ def generate_character_profile(character_name):
 要求：
 1. catchphrases 必须包含3个日常用语，要口语化、接地气，例如“呀！”、“好棒！”、“拍下来拍下来！”等。
 2. style 要描述角色说话的口语化特点，如“常用语气词”、“喜欢用短句”、“爱用省略号”等。
-3. trendy_style 要明确描述适合的流行语风格或注明“不使用流行语”。
+3. trendy_style 和 term_style 要明确描述适合的风格或注明“不使用”。
 4. 确保信息准确，基于游戏实际设定。"""
     
     try:
@@ -50,11 +53,12 @@ def generate_character_profile(character_name):
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=[
-                {"role": "system", "content": "你是一个《崩坏：星穹铁道》的专家。请以JSON格式输出。"},
+                {"role": "system", "content": "你是一个《崩坏：星穹铁道》的专家。请通过联网搜索获取最新信息，并以JSON格式输出。"},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.3,
-            max_tokens=800
+            max_tokens=800,
+            extra_body={"enable_search": True}   # 开启联网搜索
         )
         
         result = response.choices[0].message.content
@@ -94,7 +98,8 @@ def generate_relationship_matrix(character_names):
                 model="deepseek-chat",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.3,
-                max_tokens=200
+                max_tokens=200,
+                extra_body={"enable_search": True}
             )
             result = response.choices[0].message.content.strip()
             # 提取JSON
@@ -154,7 +159,8 @@ def generate_relationships_for_one(character_name, all_names):
                 model="deepseek-chat",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.3,
-                max_tokens=500
+                max_tokens=500,
+                extra_body={"enable_search": True}
             )
             result = response.choices[0].message.content.strip()
             import re

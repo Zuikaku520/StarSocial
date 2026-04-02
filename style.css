@@ -228,31 +228,42 @@ body::before {
 
 /* 表情栏（Telegram风格） */
 .reactions-section {
-    margin: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0;
     padding: 8px 0;
     border-top: 1px solid rgba(0,212,255,0.2);
     border-bottom: 1px solid rgba(0,212,255,0.2);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
 }
 
 .reaction-item {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 4px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 4px 10px;
     border-radius: 40px;
     font-size: 14px;
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    cursor: default;
+    transition: all 0.1s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.reaction-item:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.02);
 }
 
 .reaction-emoji {
     font-size: 1.2em;
+    line-height: 1;
 }
 
 .reaction-count {
     font-weight: 500;
+    color: rgba(232, 239, 247, 0.9);
 }
 
 /* 评论区 */
